@@ -1,4 +1,5 @@
 makeCachedMatrix <- function(neo = matrix()) {
+  # Cache the inverse of the passed matrix.
   if (dim(neo)[1] != dim(neo)[2]) {
     message("Matrix must be a Square Matrix")
     return()
@@ -17,6 +18,7 @@ list(set=set, get=get,
 }
 
 cacheMatrixSolve <- function(neo=matrix(), ...) {
+  #  Get the matrix from Cache, if the passed in Matrix is null.
     morpheus<-neo$getmatrix()
     if(!is.null(morpheus)){
       message("getting cached Matrix")
